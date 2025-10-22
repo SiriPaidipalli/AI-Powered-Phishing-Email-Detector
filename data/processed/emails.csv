@@ -1,0 +1,21 @@
+subject,body,label,subject_clean,body_clean,text
+Verify your account,Click to confirm your password immediately,1,verify your account,click to confirm your password immediately,subject: verify your account body: click to confirm your password immediately
+Security alert,Suspicious login detected from a new device,1,security alert,suspicious login detected from a new device,subject: security alert body: suspicious login detected from a new device
+Update billing info,Your payment failed—visit the portal to re-enter details,1,update billing info,your payment failed—visit the portal to re-enter details,subject: update billing info body: your payment failed—visit the portal to re-enter details
+Unusual activity,We paused your account for security reasons,1,unusual activity,we paused your account for security reasons,subject: unusual activity body: we paused your account for security reasons
+Payroll update,Submit your bank details via the attached form,1,payroll update,submit your bank details via the attached form,subject: payroll update body: submit your bank details via the attached form
+Win a gift card,Congratulations! Claim your $100 card here,1,win a gift card,congratulations! claim your $100 card here,subject: win a gift card body: congratulations! claim your $100 card here
+Account locked,Reset your password using this link,1,account locked,reset your password using this link,subject: account locked body: reset your password using this link
+Urgent: Invoice due,Payment overdue—open the invoice now,1,urgent: invoice due,payment overdue—open the invoice now,subject: urgent: invoice due body: payment overdue—open the invoice now
+Mailbox quota exceeded,Your mailbox is full—click to extend,1,mailbox quota exceeded,your mailbox is full—click to extend,subject: mailbox quota exceeded body: your mailbox is full—click to extend
+DocuSign pending,Please sign the attached document today,1,docusign pending,please sign the attached document today,subject: docusign pending body: please sign the attached document today
+Team meeting tomorrow,Agenda attached for tomorrow’s meeting,0,team meeting tomorrow,agenda attached for tomorrow’s meeting,subject: team meeting tomorrow body: agenda attached for tomorrow’s meeting
+Lunch order,Please fill today’s lunch preference,0,lunch order,please fill today’s lunch preference,subject: lunch order body: please fill today’s lunch preference
+Weekly report,Attached is this week’s status report,0,weekly report,attached is this week’s status report,subject: weekly report body: attached is this week’s status report
+Schedule update,Room changed to 302 for the workshop,0,schedule update,room changed to 302 for the workshop,subject: schedule update body: room changed to 302 for the workshop
+Thanks for your help,Sharing notes from our last call,0,thanks for your help,sharing notes from our last call,subject: thanks for your help body: sharing notes from our last call
+Holiday calendar,Updated holidays for this semester,0,holiday calendar,updated holidays for this semester,subject: holiday calendar body: updated holidays for this semester
+Project kickoff,Slides for the kickoff attached,0,project kickoff,slides for the kickoff attached,subject: project kickoff body: slides for the kickoff attached
+Onboarding docs,Welcome! Forms are attached,0,onboarding docs,welcome! forms are attached,subject: onboarding docs body: welcome! forms are attached
+Travel itinerary,Flight and hotel details enclosed,0,travel itinerary,flight and hotel details enclosed,subject: travel itinerary body: flight and hotel details enclosed
+Newsletter October,Highlights from this month’s events,0,newsletter october,highlights from this month’s events,subject: newsletter october body: highlights from this month’s events
