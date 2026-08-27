@@ -1,0 +1,93 @@
+{
+  "model": "TF-IDF + Logistic Regression",
+  "random_seed": 42,
+  "threshold_selection": {
+    "threshold": 0.6506418095611745,
+    "objective": "maximum phishing recall subject to phishing precision >= 0.90 on dev",
+    "minimum_precision": 0.9,
+    "constraint_met": true,
+    "precision_at_selection": 0.9005268050821196,
+    "recall_at_selection": 0.8321878579610539
+  },
+  "parameters": {
+    "tfidf": {
+      "ngram_range": [
+        1,
+        2
+      ],
+      "min_df": 2,
+      "max_df": 0.98,
+      "max_features": 200000,
+      "sublinear_tf": true,
+      "strip_accents": "unicode"
+    },
+    "logistic_regression": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "max_iter": 1000,
+      "solver": "liblinear",
+      "random_state": 42
+    }
+  },
+  "splits": {
+    "train": {
+      "rows": 45597,
+      "source": "trec5"
+    },
+    "dev": {
+      "rows": 14549,
+      "source": "trec6"
+    },
+    "test": {
+      "rows": 42954,
+      "source": "trec7",
+      "locked": true
+    }
+  },
+  "vocabulary_size": 200000,
+  "dev": {
+    "rows": 14549,
+    "phishing": {
+      "precision": 0.9005268050821196,
+      "recall": 0.8321878579610539,
+      "f1": 0.8650096740586397,
+      "f2": 0.8450130851991858,
+      "average_precision": 0.9324366216504527
+    },
+    "confusion_matrix": {
+      "tn": 10736,
+      "fp": 321,
+      "fn": 586,
+      "tp": 2906
+    },
+    "false_positive_count": 321,
+    "false_positive_rate": 0.029031382834403544,
+    "false_negative_count": 586,
+    "false_negative_rate": 0.16781214203894615
+  },
+  "test": {
+    "rows": 42954,
+    "phishing": {
+      "precision": 0.9083730559969185,
+      "recall": 0.7983580889509543,
+      "f1": 0.8498198198198198,
+      "f2": 0.8181762986477931,
+      "average_precision": 0.9477472370502222
+    },
+    "confusion_matrix": {
+      "tn": 17420,
+      "fp": 1903,
+      "fn": 4765,
+      "tp": 18866
+    },
+    "false_positive_count": 1903,
+    "false_positive_rate": 0.0984836723076127,
+    "false_negative_count": 4765,
+    "false_negative_rate": 0.20164191104904575
+  },
+  "artifacts": {
+    "model": "models/baseline_lr.joblib",
+    "precision_recall_curve": "reports/figures/baseline_precision_recall.png",
+    "confusion_matrix": "reports/figures/baseline_confusion_matrices.png"
+  }
+}

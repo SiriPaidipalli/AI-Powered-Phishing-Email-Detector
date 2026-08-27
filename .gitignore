@@ -5,5 +5,15 @@ data/processed/**
 *.parquet.gzip
 *.jsonl
 
+reports/*.tmp
+
 __pycache__/
 *.py[cod]
+.venv/
+.pytest_cache/
+.coverage
+.DS_Store
+*.tmp
+*.log
+predictions.csv
+phishing_analysis.csv

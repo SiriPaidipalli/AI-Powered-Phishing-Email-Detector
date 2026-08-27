@@ -52,6 +52,9 @@ class _HTMLTextExtractor(HTMLParser):
     def get_text(self) -> str:
         return " ".join(self.parts)
 
+    def error(self, message: str) -> None:
+        """Tolerate malformed declarations found in real email bodies."""
+
 
 def canonicalize_text(value: str) -> str:
     """Normalize presentation while preserving addresses used to identify a message."""
@@ -59,9 +62,19 @@ def canonicalize_text(value: str) -> str:
         return ""
 
     parser = _HTMLTextExtractor()
-    parser.feed(value)
-    parser.close()
-    return re.sub(r"\s+", " ", parser.get_text().lower()).strip()
+    try:
+        parser.feed(value)
+        parser.close()
+        text = parser.get_text()
+    except (AssertionError, NotImplementedError, TypeError):
+        text = re.sub(
+            r"<\s*(script|style)\b[^>]*>.*?<\s*/\s*\1\s*>",
+            " ",
+            value,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        text = re.sub(r"<[^>]*>", " ", text)
+    return re.sub(r"\s+", " ", text.lower()).strip()
 
 
 def clean_text(value: str) -> str:

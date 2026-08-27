@@ -38,6 +38,12 @@ class PreprocessingTests(unittest.TestCase):
 
         self.assertNotEqual(first, second)
 
+    def test_canonicalization_tolerates_malformed_html_declarations(self):
+        subject, body = canonicalize_email("Notice", "Text <![ malformed declaration")
+
+        self.assertEqual(subject, "notice")
+        self.assertTrue(body.startswith("text"))
+
     def test_rejects_missing_subject_or_body(self):
         for record in (
             {"subject": "", "body": "Message", "label": "0"},

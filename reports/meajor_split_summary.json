@@ -1,0 +1,50 @@
+{
+  "input": "data/processed/meajor_canonical.csv",
+  "metadata_input": "data/processed/meajor_metadata.jsonl",
+  "deduplication": {
+    "input_rows": 108684,
+    "blank_body_rows": 1,
+    "blank_subject_rows": 1455,
+    "unique_groups": 104518,
+    "duplicate_groups": 1044,
+    "duplicate_records_beyond_first": 4166,
+    "conflicting_label_groups": 0,
+    "records_in_conflicting_groups": 0,
+    "cross_source_duplicate_groups": 1,
+    "records_in_cross_source_duplicate_groups": 2,
+    "groups_excluded_for_blank_subject_or_body": 1418
+  },
+  "splits": {
+    "train": {
+      "total": 45597,
+      "benign": 26559,
+      "phishing": 19038,
+      "sources": {
+        "trec5": 45597
+      },
+      "data_file": "data/processed/train.csv",
+      "metadata_file": "data/processed/train_metadata.jsonl"
+    },
+    "dev": {
+      "total": 14549,
+      "benign": 11057,
+      "phishing": 3492,
+      "sources": {
+        "trec6": 14549
+      },
+      "data_file": "data/processed/dev.csv",
+      "metadata_file": "data/processed/dev_metadata.jsonl"
+    },
+    "test": {
+      "total": 42954,
+      "benign": 19323,
+      "phishing": 23631,
+      "sources": {
+        "trec7": 42954
+      },
+      "data_file": "data/processed/test.csv",
+      "metadata_file": "data/processed/test_metadata.jsonl"
+    }
+  },
+  "retained_total": 103100
+}

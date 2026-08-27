@@ -1,0 +1,105 @@
+{
+  "input": "data/processed/meajor_canonical.csv",
+  "metadata_input": "data/processed/meajor_metadata.jsonl",
+  "records": {
+    "total": 108684,
+    "metadata_rows": 108684,
+    "class_counts": {
+      "benign": 60650,
+      "phishing": 48034
+    },
+    "class_balance_percent": {
+      "benign": 55.804,
+      "phishing": 44.196
+    },
+    "invalid_labels": 0
+  },
+  "missing": {
+    "blank_subject": 1455,
+    "blank_body": 1,
+    "empty_after_canonicalization": 0
+  },
+  "duplicates": {
+    "exact": {
+      "unique_groups": 104933,
+      "duplicate_groups": 888,
+      "duplicate_records_beyond_first": 3751,
+      "conflicting_label_groups": 0,
+      "records_in_conflicting_groups": 0
+    },
+    "canonicalized": {
+      "unique_groups": 104518,
+      "duplicate_groups": 1044,
+      "duplicate_records_beyond_first": 4166,
+      "conflicting_label_groups": 0,
+      "records_in_conflicting_groups": 0
+    },
+    "retained_after_recommended_deduplication": 104518,
+    "retained_after_required_text_validation_and_deduplication": 103100,
+    "policy": "Group by canonicalized subject and body; retain one record from each same-label group and exclude every conflicting-label group."
+  },
+  "lengths": {
+    "subject_characters": {
+      "min": 0,
+      "median": 31.0,
+      "mean": 41.95,
+      "p95": 103,
+      "p99": 274,
+      "max": 3701
+    },
+    "body_characters": {
+      "min": 0,
+      "median": 797.0,
+      "mean": 1168.1,
+      "p95": 3629,
+      "p99": 4923,
+      "max": 30574
+    },
+    "subject_words": {
+      "min": 0,
+      "median": 5.0,
+      "mean": 5.29,
+      "p95": 11,
+      "p99": 17,
+      "max": 578
+    },
+    "body_words": {
+      "min": 0,
+      "median": 121.0,
+      "mean": 171.74,
+      "p95": 547,
+      "p99": 709,
+      "max": 1199
+    }
+  },
+  "sources": {
+    "trec5": {
+      "benign": 29929,
+      "phishing": 19654,
+      "total": 49583,
+      "percent_of_dataset": 45.6213,
+      "phishing_percent": 39.6386
+    },
+    "trec6": {
+      "benign": 11208,
+      "phishing": 3797,
+      "total": 15005,
+      "percent_of_dataset": 13.8061,
+      "phishing_percent": 25.3049
+    },
+    "trec7": {
+      "benign": 19513,
+      "phishing": 24583,
+      "total": 44096,
+      "percent_of_dataset": 40.5727,
+      "phishing_percent": 55.7488
+    }
+  },
+  "anomaly_counts": {
+    "metadata_alignment_errors": 0,
+    "missing_source_metadata": 0,
+    "subjects_over_500_characters": 35,
+    "bodies_over_100000_characters": 0,
+    "nonblank_bodies_under_10_characters": 170
+  }
+}
