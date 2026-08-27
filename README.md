@@ -172,6 +172,10 @@ The application provides:
 
 Batch input requires `subject` and `body` columns. The application does not write prediction files to the repository.
 
+### Analyst Dashboard
+
+![Phishing Email Detector analyst dashboard](screenshots/analyst_dashboard.png)
+
 ## Evaluation results
 
 Locked `trec7` test results at threshold `0.6506418095611745`:
@@ -359,7 +363,6 @@ The small tracked seed CSVs and legacy images predate the MeAJOR evaluation and 
 - Improve deterministic fallback coverage without hiding rules or treating the triage score as probability.
 - Evaluate probability calibration and operating thresholds under realistic phishing prevalence.
 - Add email-header, attachment, redirect, and domain-reputation signals through isolated, testable components.
-- Create a new screenshot after the current Streamlit interface is visually reviewed.
 
 ## License
 
