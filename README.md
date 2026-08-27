@@ -1,4 +1,8 @@
-# Phishing Email Detector
+# AI-Powered Phishing Email Detector
+
+A phishing-analysis system that combines a machine-learning baseline
+with deterministic security indicators, transparent risk scoring,
+source-disjoint evaluation, and adversarial robustness testing.
 
 ## Overview
 
