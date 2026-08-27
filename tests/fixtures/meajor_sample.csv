@@ -1,0 +1,3 @@
+subject,body,label,source,sender_domain,url_count
+Status notice,Please review the status page,0,trec5,example.org,0
+Account notice,Please review the account page,1,nazario,example.net,1
